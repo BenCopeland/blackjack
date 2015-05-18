@@ -17,11 +17,7 @@ $('.newGameButton').on("click", function() {
       for (var i=0; i<5; i++){
         if (data.cards[i].value === "ACE") {
           dCards.push(111);
-        }else if (data.cards[i].value === "KING"){
-          dCards.push("10");
-        }else if (data.cards[i].value === "QUEEN"){
-          dCards.push("10");
-        }else if (data.cards[i].value === "JACK"){
+        }else if (data.cards[i].value === "KING"||data.cards[i].value === "QUEEN"||data.cards[i].value === "JACK"){
           dCards.push("10");
         }else{
         dCards.push(data.cards[i].value);
@@ -30,11 +26,7 @@ $('.newGameButton').on("click", function() {
       for (var i=5; i<10; i++){
         if (data.cards[i].value === "ACE") {
           pCards.push(111);
-        }else if (data.cards[i].value === "KING"){
-          pCards.push("10");
-        }else if (data.cards[i].value === "QUEEN"){
-          pCards.push("10");
-        }else if (data.cards[i].value === "JACK"){
+        }else if (data.cards[i].value === "KING"||data.cards[i].value === "QUEEN"||data.cards[i].value === "JACK"){
           pCards.push("10");
         }else{
         pCards.push(data.cards[i].value);
@@ -54,6 +46,9 @@ $('.newGameButton').on("click", function() {
           pCards[pAce] = [1, 11];
         }
       }
+
+      dTotal = dCards[0]+dCards[1];
+      pTotal = pCards[5]+pCards[6];
 
 
 
